@@ -17,7 +17,22 @@
     <div class="emscripten_border">
       <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex=-1></canvas>
     </div>
-    <div id="output" style="white-space: pre-wrap; font-family: monospace;"></div>
+    <div id="output" style="
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: pre-wrap;
+  font-family: monospace;
+  background-color: #222;
+  color: #fff;
+  padding: 1em;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 90%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+"></div>
+
     <script type='text/javascript'>
       var statusElement = document.getElementById('status');
       var progressElement = document.getElementById('progress');
