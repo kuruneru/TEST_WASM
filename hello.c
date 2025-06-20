@@ -1,7 +1,8 @@
-#include <stdio.h>
+#include <emscripten/emscripten.h>
 
 int main() {
-    printf("Hello World\n");
-    printf("fuch_you\n");
-    return 0;
+  EM_ASM({
+    document.body.innerHTML = 'Hello from WASM!';
+  });
+  return 0;
 }
