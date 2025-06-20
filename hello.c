@@ -1,8 +1,6 @@
-#include <emscripten/emscripten.h>
+#include <stdio.h>
 
 int main() {
-  EM_ASM({
-    document.body.innerHTML = 'Hello from WASM!';
-  });
-  return 0;
+    printf("Hello World");
+    return 0;
 }
