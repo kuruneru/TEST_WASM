@@ -1,8 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head><meta charset="UTF-8"><title>WASM TEST</title></head>
-    <body>
-        <h1>Hello WASM!</h1>
-        <script src="hello.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8">
+    <title>WASM Test</title>
+  </head>
+  <body>
+    <h1>Hello WASM!</h1>
+    <pre id="output"></pre>
+
+    <script src="hello.js"></script>
+    <script>
+      // hello.js がロードされて Module オブジェクトを提供する
+      var Module = {
+        print: function(text) {
+          document.getElementById("output").textContent += text + "\n";
+        }
+      };
+    </script>
+  </body>
 </html>
